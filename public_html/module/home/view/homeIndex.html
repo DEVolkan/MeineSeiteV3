@@ -1,0 +1,62 @@
+<style type="text/css">
+    body {
+        font-family: "helvetica";
+        color : #333;
+    }
+    [ac-chart] {
+        float:left;
+        width: 48%;
+        height: 400px;
+        margin: 0 1%;
+    }
+    .ac-tooltip {
+        color: black;
+        border: 2px solid rgba(200,200,0,0.8);
+        background-color: rgba(200,200,0,0.5);
+    }
+
+    #chart1 .ac-legend-box {
+        border-radius: 10px;
+    }
+</style>
+<div class="kasten " >
+    <div class="jumbotron">
+        <div class="row">
+            <div  class="col-sm-3">
+                <label class="label aareon-farbe-schrift">Willkommen auf meiner Seite.</label><br><br><br>
+                <img src="pictures/JPH_9459cd.jpg" height="105">
+            </div>
+            <div class="col-sm-5 aareon-grau-schrift">
+                <br><br><br>
+                <label class="groeßer">Name: Volkan T. Simsek</label><br>
+                <label class="groeßer">Alter: 21</label><br>
+                <label class="groeßer">Betrieb: Aareon Deutschland GmbH</label><br>
+                <label class="groeßer">Fähigkeiten: Java, C#, HTML, Javascript, XAML und AngularJS</label>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            {{chartType}}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+            <li ng-click="chartType = 'bar'"><a role="menuitem" tabindex="-1" >bar</a></li>
+            <li ng-click="chartType = 'pie'"><a role="menuitem" tabindex="-1" >pie</a></li>
+            <li ng-click="chartType = 'line'"><a role="menuitem" tabindex="-1" >line</a></li>
+            <li ng-click="chartType = 'point'"><a role="menuitem" tabindex="-1" >point</a></li>
+            <li ng-click="chartType = 'area'"><a role="menuitem" tabindex="-1" >area</a></li>
+        </ul>
+    </div>
+
+
+
+
+    <br />
+
+    <div id="chart1" ac-chart="chartType" ac-data="data1" ac-config="config1"></div>
+</div>
